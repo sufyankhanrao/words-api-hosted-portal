@@ -1,0 +1,819 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Words API",
+    "description": "Words API lets you retrieve information about English words, including definitions, synonyms, rhymes, pronunciation, syllables, and frequency of usage. It also can tell you about relationships between words, for instance that “math” has categories like “algebra” and “geometry”, or that a “finger” is part of a “hand”.",
+    "contact": {
+      "name": "Muhammad Sufyan",
+      "url": "apimatic.io",
+      "email": "muhammad.sufyan@apimatic.io"
+    },
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://wordsapiv1.p.rapidapi.com",
+      "variables": {}
+    }
+  ],
+  "paths": {
+    "/words/{word}": {
+      "get": {
+        "tags": [
+          "APIs"
+        ],
+        "summary": "Word",
+        "description": "Retrieve information about a word. Results can include definitions, part of speech, synonyms, related words, syllables, and pronunciation. This method is useful to see which relationships are attached to which definition and part of speech of a word.",
+        "operationId": "Word",
+        "parameters": [
+          {
+            "name": "word",
+            "in": "path",
+            "description": "This is a template parameter that is used to provide the word, about which the information is being fetched.",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "example": "Testing"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WordResponse"
+                },
+                "example": {
+                  "word": "testing",
+                  "results": [
+                    {
+                      "definition": "the act of giving students or candidates a test (as by questions) to determine what they know or have learned",
+                      "partOfSpeech": "noun",
+                      "synonyms": [
+                        "examination"
+                      ],
+                      "typeOf": [
+                        "investigating",
+                        "investigation"
+                      ],
+                      "hasTypes": [
+                        "11-plus",
+                        "eleven-plus"
+                      ],
+                      "derivation": [
+                        "test"
+                      ]
+                    },
+                    {
+                      "definition": "an examination of the characteristics of something",
+                      "partOfSpeech": "noun",
+                      "typeOf": [
+                        "examination",
+                        "scrutiny"
+                      ],
+                      "hasTypes": [
+                        "screening"
+                      ],
+                      "derivation": [
+                        "test"
+                      ],
+                      "examples": [
+                        "there are laboratories for commercial testing",
+                        "it involved testing thousands of children for smallpox"
+                      ]
+                    },
+                    {
+                      "definition": "the act of subjecting to experimental test in order to determine how well something works",
+                      "partOfSpeech": "noun",
+                      "typeOf": [
+                        "experimentation",
+                        "experiment"
+                      ],
+                      "derivation": [
+                        "test"
+                      ],
+                      "examples": [
+                        "they agreed to end the testing of atomic weapons"
+                      ]
+                    }
+                  ],
+                  "pronunciation": "'tɛstɪŋ",
+                  "frequency": 4.14
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/words/{word}/synonyms": {
+      "get": {
+        "tags": [
+          "APIs"
+        ],
+        "summary": "Synonyms",
+        "description": "Get synonyms of a word",
+        "operationId": "Synonyms",
+        "parameters": [
+          {
+            "name": "word",
+            "in": "path",
+            "description": "The word to search synonyms for.",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "example": "lovely"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SynonymsResponse"
+                },
+                "example": {
+                  "word": "lovely",
+                  "synonyms": [
+                    "adorable",
+                    "endearing",
+                    "cover girl",
+                    "pin-up"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/words/{word}/definitions": {
+      "get": {
+        "tags": [
+          "APIs"
+        ],
+        "summary": "Definitions",
+        "description": "Get definitions of a word, including the part of speech.",
+        "operationId": "Definitions",
+        "parameters": [
+          {
+            "name": "word",
+            "in": "path",
+            "description": "The word to search the definitions for.",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "example": "lovely"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DefinitionsResponse"
+                },
+                "example": {
+                  "word": "lovely",
+                  "definition": [
+                    "lovable especially in a childlike or naive way",
+                    "a very pretty girl who works as a photographer's model",
+                    "appealing to the emotions as well as the eye"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/words/{word}/examples": {
+      "get": {
+        "tags": [
+          "APIs"
+        ],
+        "summary": "Examples",
+        "description": "Get examples of how the word is used.",
+        "operationId": "Examples",
+        "parameters": [
+          {
+            "name": "word",
+            "in": "path",
+            "description": "The word to search the examples for.",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "example": "wind"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExamplesResponse"
+                },
+                "example": {
+                  "word": "testing",
+                  "examples": [
+                    "there are laboratories for commercial testing",
+                    "it involved testing thousands of children for smallpox",
+                    "they agreed to end the testing of atomic weapons"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/words/{word}/pronunciation": {
+      "get": {
+        "tags": [
+          "APIs"
+        ],
+        "summary": "Pronunciation",
+        "description": "How to pronounce a word, according to the International Phonetic Alphabet. May include multiple results if the word is pronounced differently depending on its part of speech.",
+        "operationId": "Pronunciation",
+        "parameters": [
+          {
+            "name": "word",
+            "in": "path",
+            "description": "The word to search pronunciation for.",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "example": "wind"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PronunciationResponse"
+                },
+                "example": {
+                  "word": "wind",
+                  "pronunciation": {
+                    "all": "wɪnd",
+                    "noun": "wɪnd",
+                    "verb": "waɪnd"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/words/{word}/frequency": {
+      "get": {
+        "tags": [
+          "APIs"
+        ],
+        "summary": "Frequency",
+        "description": "Expands upon the frequency score returned by the main /words/{word} endpoint. Returns zipf, a score indicating how common the word is in the English language, with a range of 1 to 7; per Million, the number of times the word is likely to appear in a corpus of one million English words; and diversity, a 0-1 scale the shows the likelihood of the word appearing in an English document that is part of a corpus.",
+        "operationId": "Frequency",
+        "parameters": [
+          {
+            "name": "word",
+            "in": "path",
+            "description": "The word to search frequency for.",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "example": "lovely"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FrequencyResponse"
+                },
+                "example": {
+                  "word": "wind",
+                  "frequency": {
+                    "zipf": 4.81,
+                    "perMillion": 64.22,
+                    "diversity": 0.2
+                  }
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "WordDetails": {
+        "title": "WordDetails",
+        "type": "object",
+        "properties": {
+          "definition": {
+            "type": "string",
+            "description": "Explains the definition of the word.",
+            "example": "an examination of the characteristics of something."
+          },
+          "partOfSpeech": {
+            "type": "string",
+            "description": "Explains what part of speech the word is.",
+            "example": "noun"
+          },
+          "synonyms": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The list of synonyms.",
+            "example": [
+              "examination"
+            ]
+          },
+          "typeOf": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of words that are more general than the searched word.",
+            "example": [
+              "examination",
+              "scrutiny"
+            ]
+          },
+          "hasTypes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "More specific examples of types of searched word.",
+            "example": [
+              "screening"
+            ]
+          },
+          "derivation": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The derivation if any.",
+            "example": [
+              "test"
+            ]
+          },
+          "examples": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The usage examples of word if any.",
+            "example": [
+              "there are laboratories for commercial testing",
+              "it involved testing thousands of children for smallpox"
+            ]
+          }
+        },
+        "description": "This custom type stores word information.",
+        "example": {
+          "definition": "the act of giving students or candidates a test (as by questions) to determine what they know or have learned",
+          "partOfSpeech": "noun",
+          "synonyms": [
+            "examination"
+          ],
+          "typeOf": [
+            "investigating",
+            "investigation"
+          ],
+          "hasTypes": [
+            "11-plus",
+            "eleven-plus"
+          ],
+          "derivation": [
+            "test"
+          ]
+        }
+      },
+      "WordResponse": {
+        "title": "WordResponse",
+        "required": [
+          "word",
+          "results"
+        ],
+        "type": "object",
+        "properties": {
+          "word": {
+            "type": "string",
+            "description": "The word that is searched.",
+            "example": "testing"
+          },
+          "results": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/WordDetails"
+            },
+            "description": "This field contains detailed information of the word.",
+            "example": [
+              {
+                "definition": "the act of giving students or candidates a test (as by questions) to determine what they know or have learned",
+                "partOfSpeech": "noun",
+                "synonyms": [
+                  "examination"
+                ],
+                "typeOf": [
+                  "investigating",
+                  "investigation"
+                ],
+                "hasTypes": [
+                  "11-plus",
+                  "eleven-plus"
+                ],
+                "derivation": [
+                  "test"
+                ]
+              },
+              {
+                "definition": "an examination of the characteristics of something",
+                "partOfSpeech": "noun",
+                "typeOf": [
+                  "examination",
+                  "scrutiny"
+                ],
+                "hasTypes": [
+                  "screening"
+                ],
+                "derivation": [
+                  "test"
+                ],
+                "examples": [
+                  "there are laboratories for commercial testing",
+                  "it involved testing thousands of children for smallpox"
+                ]
+              },
+              {
+                "definition": "the act of subjecting to experimental test in order to determine how well something works",
+                "partOfSpeech": "noun",
+                "typeOf": [
+                  "experimentation",
+                  "experiment"
+                ],
+                "derivation": [
+                  "test"
+                ],
+                "examples": [
+                  "they agreed to end the testing of atomic weapons"
+                ]
+              }
+            ]
+          },
+          "pronunciation": {
+            "type": "string",
+            "description": "The pronunciation of the word that is searched.",
+            "example": "'tɛstɪŋ"
+          },
+          "frequency": {
+            "type": "number",
+            "description": "The frequency of the word usage.",
+            "example": 4.14
+          }
+        },
+        "description": "This custom type contains the response for word API.",
+        "example": {
+          "word": "testing",
+          "results": [
+            {
+              "definition": "the act of giving students or candidates a test (as by questions) to determine what they know or have learned",
+              "partOfSpeech": "noun",
+              "synonyms": [
+                "examination"
+              ],
+              "typeOf": [
+                "investigating",
+                "investigation"
+              ],
+              "hasTypes": [
+                "11-plus",
+                "eleven-plus"
+              ],
+              "derivation": [
+                "test"
+              ]
+            },
+            {
+              "definition": "an examination of the characteristics of something",
+              "partOfSpeech": "noun",
+              "typeOf": [
+                "examination",
+                "scrutiny"
+              ],
+              "hasTypes": [
+                "screening"
+              ],
+              "derivation": [
+                "test"
+              ],
+              "examples": [
+                "there are laboratories for commercial testing",
+                "it involved testing thousands of children for smallpox"
+              ]
+            },
+            {
+              "definition": "the act of subjecting to experimental test in order to determine how well something works",
+              "partOfSpeech": "noun",
+              "typeOf": [
+                "experimentation",
+                "experiment"
+              ],
+              "derivation": [
+                "test"
+              ],
+              "examples": [
+                "they agreed to end the testing of atomic weapons"
+              ]
+            }
+          ],
+          "pronunciation": "'tɛstɪŋ",
+          "frequency": 4.14
+        }
+      },
+      "SynonymsResponse": {
+        "title": "SynonymsResponse",
+        "required": [
+          "word",
+          "synonyms"
+        ],
+        "type": "object",
+        "properties": {
+          "word": {
+            "type": "string",
+            "description": "The word that is searched.",
+            "example": "lovely"
+          },
+          "synonyms": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The synonyms of the searched word.",
+            "example": [
+              "adorable",
+              "endearing",
+              "cover girl",
+              "pin-up"
+            ]
+          }
+        },
+        "description": "This custom type contains response for synonyms endpoint.",
+        "example": {
+          "word": "lovely",
+          "synonyms": [
+            "adorable",
+            "endearing",
+            "cover girl",
+            "pin-up"
+          ]
+        }
+      },
+      "DefinitionsResponse": {
+        "title": "DefinitionsResponse",
+        "required": [
+          "word",
+          "definition"
+        ],
+        "type": "object",
+        "properties": {
+          "word": {
+            "type": "string",
+            "description": "The word that is searched.",
+            "example": "lovely"
+          },
+          "definition": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The definitions of the searched word.",
+            "example": [
+              "lovable especially in a childlike or naive way",
+              "a very pretty girl who works as a photographer's model",
+              "appealing to the emotions as well as the eye"
+            ]
+          }
+        },
+        "description": "This custom type contains response for definitions endpoint.",
+        "example": {
+          "word": "lovely",
+          "definition": [
+            "lovable especially in a childlike or naive way",
+            "a very pretty girl who works as a photographer's model",
+            "appealing to the emotions as well as the eye"
+          ]
+        }
+      },
+      "ExamplesResponse": {
+        "title": "ExamplesResponse",
+        "required": [
+          "word",
+          "examples"
+        ],
+        "type": "object",
+        "properties": {
+          "word": {
+            "type": "string",
+            "description": "The word that is searched.",
+            "example": "testing"
+          },
+          "examples": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The usage examples of the searched word.",
+            "example": [
+              "there are laboratories for commercial testing",
+              "it involved testing thousands of children for smallpox",
+              "they agreed to end the testing of atomic weapons"
+            ]
+          }
+        },
+        "description": "This custom type contains response for examples endpoint.",
+        "example": {
+          "word": "testing",
+          "examples": [
+            "there are laboratories for commercial testing",
+            "it involved testing thousands of children for smallpox",
+            "they agreed to end the testing of atomic weapons"
+          ]
+        }
+      },
+      "PronunciationResponse": {
+        "title": "PronunciationResponse",
+        "required": [
+          "word",
+          "pronunciation"
+        ],
+        "type": "object",
+        "properties": {
+          "word": {
+            "type": "string",
+            "description": "The word that is searched.",
+            "example": "testing"
+          },
+          "pronunciation": {
+            "$ref": "#/components/schemas/PronunciationDetails"
+          }
+        },
+        "description": "This custom type contains response for pronunciation endpoint.",
+        "example": {
+          "word": "wind",
+          "pronunciation": {
+            "all": "wɪnd",
+            "noun": "wɪnd",
+            "verb": "waɪnd"
+          }
+        }
+      },
+      "PronunciationDetails": {
+        "title": "PronunciationDetails",
+        "required": [
+          "all"
+        ],
+        "type": "object",
+        "properties": {
+          "all": {
+            "type": "string",
+            "description": "The pronunciation of the word.",
+            "example": "wɪnd"
+          },
+          "noun": {
+            "type": "string",
+            "description": "The noun pronunciation of the word.",
+            "example": "wɪnd"
+          },
+          "verb": {
+            "type": "string",
+            "description": "The verb pronunciation of the word.",
+            "example": "waɪnd"
+          }
+        },
+        "description": "This model contains pronunciation details of a specific word.",
+        "example": {
+          "all": "wɪnd",
+          "noun": "wɪnd",
+          "verb": "waɪnd"
+        }
+      },
+      "FrequencyDetails": {
+        "title": "FrequencyDetails",
+        "required": [
+          "zipf",
+          "perMillion",
+          "diversity"
+        ],
+        "type": "object",
+        "properties": {
+          "zipf": {
+            "type": "number",
+            "description": "Explains the zipf score.",
+            "example": 4.82
+          },
+          "perMillion": {
+            "type": "number",
+            "description": "Explains the perMillion score.",
+            "example": 65.76
+          },
+          "diversity": {
+            "type": "number",
+            "description": "Explains the diversity score.",
+            "example": 0.17
+          }
+        },
+        "description": "This model contains frequency details of a specific word.",
+        "example": {
+          "zipf": 4.81,
+          "perMillion": 64.22,
+          "diversity": 0.2
+        }
+      },
+      "FrequencyResponse": {
+        "title": "FrequencyResponse",
+        "required": [
+          "word",
+          "frequency"
+        ],
+        "type": "object",
+        "properties": {
+          "word": {
+            "type": "string",
+            "description": "The word that is searched.",
+            "example": "testing"
+          },
+          "frequency": {
+            "$ref": "#/components/schemas/FrequencyDetails"
+          }
+        },
+        "description": "This custom type contains response for frequency endpoint.",
+        "example": {
+          "word": "wind",
+          "frequency": {
+            "zipf": 4.81,
+            "perMillion": 64.22,
+            "diversity": 0.2
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "RapidAPI-Key": {
+        "type": "apiKey",
+        "description": "This is an API key from RapidAPI.",
+        "name": "X-RapidAPI-Key",
+        "in": "header"
+      }
+    }
+  },
+  "security": [
+    {
+      "RapidAPI-Key": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "APIs",
+      "description": ""
+    }
+  ]
+}
