@@ -8,126 +8,7 @@
       "url": "apimatic.io",
       "email": "muhammad.sufyan@apimatic.io"
     },
-    "version": "1.0",
-    "x-codegen-settings": {
-      "Nullify404": false,
-      "GenerateAsyncCode": true,
-      "UseMethodPrefix": false,
-      "UseModelPostfix": false,
-      "UseControllerPrefix": true,
-      "UseEnumPostfix": true,
-      "CollectParameters": false,
-      "UseConstructorsForConfig": false,
-      "UseCommonSDKLibrary": false,
-      "iOSUseAppInfoPlist": false,
-      "AndroidUseAppManifest": false,
-      "BodySerialization": 0,
-      "EnableAdditionalModelProperties": false,
-      "PreserveParameterOrder": true,
-      "AppendContentHeaders": true,
-      "iOSGenerateCoreData": false,
-      "GenerateInterfaces": false,
-      "NodeHttpClient": "NODE_REQUEST",
-      "ValidateRequiredParameters": false,
-      "JavaUsePropertiesConfig": false,
-      "Timeout": 0.0,
-      "StoreTimezoneInformation": false,
-      "EnablePHPComposerVersionString": false,
-      "EnableLogging": false,
-      "ArraySerialization": "Indexed",
-      "ModelSerializationScheme": "Json",
-      "UseExceptionPrefix": true,
-      "RunscopeEnabled": false,
-      "AndroidHttpClient": "ANDROID_OK",
-      "ObjCHttpClient": "UNIREST",
-      "CSharpHttpClient": "UNIREST",
-      "PHPHttpClient": "UNIREST",
-      "JavaHttpClient": "JAVA_OK",
-      "ParameterArrayFormat": "ParamArrayWithIndex",
-      "SecurityProtocols": [
-        "Ssl3",
-        "Tls"
-      ],
-      "GenerateTravisConfig": false,
-      "GenerateCircleConfig": false,
-      "GenerateAppveyorConfig": false,
-      "GenerateJenkinsConfig": false,
-      "EnableHttpCache": false,
-      "Retries": 0,
-      "RetryInterval": 1.0,
-      "GenerateAdvancedDocs": true,
-      "UnderscoreNumbers": true,
-      "UseSingletonPattern": true,
-      "DisableLinting": false,
-      "ApplyCustomizations": [],
-      "SortResources": false,
-      "AllowSkippingSSLCertVerification": false,
-      "DoNotSplitWords": [],
-      "EnableGlobalUserAgent": true,
-      "ReturnCompleteHttpResponse": false,
-      "GenerateModels": true,
-      "GenerateExceptions": true,
-      "IgnoreIfNullJson": false,
-      "DisableDocs": false,
-      "LiftParameterDescriptionFromCustomType": false,
-      "ThrowForHttpErrorStatusCodes": true,
-      "ResponseMapping": {
-        "Type": "Simple"
-      },
-      "ForceKeywordArgsInRuby": false,
-      "SymbolizeHashKeysInRuby": false,
-      "UsageExampleEndpoint": {
-        "Description": "",
-        "EndpointGroupName": "",
-        "EndpointName": ""
-      },
-      "IsLatestVersion": false,
-      "EnableImmutableModels": false,
-      "GenerateEnums": true,
-      "BackoffFactor": 2.0,
-      "StatusCodesToRetry": [
-        408,
-        413,
-        429,
-        500,
-        502,
-        503,
-        504,
-        521,
-        522,
-        524
-      ],
-      "RequestMethodsToRetry": [
-        "GET",
-        "PUT"
-      ],
-      "UserConfigurableRetries": true,
-      "UseEndpointMethodName": false,
-      "EncodeTemplateParameters": true,
-      "GenerateExamplesForOptionalFields": false,
-      "MultitargetDotnetVersions": false,
-      "BackoffMax": 0.0,
-      "RetryOnTimeout": true,
-      "EnableCookies": false,
-      "EnableJsonPassThroughForAny": false
-    },
-    "x-server-configuration": {
-      "default-environment": "production",
-      "default-server": "default",
-      "environments": [
-        {
-          "name": "production",
-          "servers": [
-            {
-              "name": "default",
-              "url": "https://wordsapiv1.p.rapidapi.com"
-            }
-          ]
-        }
-      ],
-      "parameters": []
-    },
-    "x-image-uri": ""
+    "version": "1.0"
   },
   "servers": [
     {
@@ -142,7 +23,7 @@
           "APIs"
         ],
         "summary": "Synonyms",
-        "description": "Get synonyms of a word",
+        "description": "Get synonyms of a word.",
         "operationId": "Synonyms",
         "parameters": [
           {
@@ -179,37 +60,7 @@
             }
           }
         },
-        "deprecated": false,
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        },
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "GET",
-              "uri": "/words/lovely/synonyms"
-            },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "KEYS",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "statusCode": "200",
-              "headers": {
-                "Content-Type": "application/json"
-              },
-              "body": "{\"word\":\"lovely\",\"synonyms\":[\"adorable\",\"endearing\",\"cover girl\",\"pin-up\"]}"
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": false,
-            "x-testName": "Test Synonyms",
-            "x-testDescription": "Get synonyms of a word"
-          }
-        ]
+        "deprecated": false
       }
     },
     "/words/{word}/definitions": {
@@ -254,37 +105,7 @@
             }
           }
         },
-        "deprecated": false,
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        },
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "GET",
-              "uri": "/words/lovely/definitions"
-            },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "KEYS",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "statusCode": "200",
-              "headers": {
-                "Content-Type": "application/json"
-              },
-              "body": "{\"word\":\"lovely\",\"definition\":[\"lovable especially in a childlike or naive way\",\"a very pretty girl who works as a photographer's model\",\"appealing to the emotions as well as the eye\"]}"
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": false,
-            "x-testName": "Test Definitions",
-            "x-testDescription": "Get definitions of a word, including the part of speech."
-          }
-        ]
+        "deprecated": false
       }
     },
     "/words/{word}/pronunciation": {
@@ -329,37 +150,7 @@
             }
           }
         },
-        "deprecated": false,
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        },
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "GET",
-              "uri": "/words/wind/pronunciation"
-            },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "KEYS",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "statusCode": "200",
-              "headers": {
-                "Content-Type": "application/json"
-              },
-              "body": "{\"word\":\"wind\",\"pronunciation\":{\"all\":\"wɪnd\",\"noun\":\"wɪnd\",\"verb\":\"waɪnd\"}}"
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": false,
-            "x-testName": "Test Pronunciation",
-            "x-testDescription": "How to pronounce a word, according to the International Phonetic Alphabet. May include multiple results if the word is pronounced differently depending on its part of speech."
-          }
-        ]
+        "deprecated": false
       }
     },
     "/words/{word}": {
@@ -379,7 +170,7 @@
             "style": "simple",
             "schema": {
               "type": "string",
-              "example": "wind"
+              "example": "Testing"
             }
           }
         ],
@@ -392,409 +183,11 @@
                 "schema": {
                   "$ref": "#/components/schemas/WordResponse"
                 }
-                "example": {
-                  "word": "wind",
-                  "results": [
-                      {
-                          "definition": "raise or haul up with or as if with mechanical help",
-                          "partOfSpeech": "verb",
-                          "synonyms": [
-                              "hoist",
-                              "lift"
-                          ],
-                          "typeOf": [
-                              "raise",
-                              "lift",
-                              "get up",
-                              "elevate",
-                              "bring up"
-                          ],
-                          "hasTypes": [
-                              "trice up",
-                              "trice"
-                          ]
-                      },
-                      {
-                          "definition": "catch the scent of; get wind of",
-                          "partOfSpeech": "verb",
-                          "synonyms": [
-                              "nose",
-                              "scent"
-                          ],
-                          "typeOf": [
-                              "smell"
-                          ]
-                      },
-                      {
-                          "definition": "a reflex that expels intestinal gas through the anus",
-                          "partOfSpeech": "noun",
-                          "synonyms": [
-                              "breaking wind",
-                              "fart",
-                              "farting",
-                              "flatus"
-                          ],
-                          "typeOf": [
-                              "reflex",
-                              "instinctive reflex",
-                              "innate reflex",
-                              "reflex action",
-                              "physiological reaction",
-                              "unconditioned reflex",
-                              "inborn reflex",
-                              "reflex response"
-                          ]
-                      },
-                      {
-                          "definition": "form into a wreath",
-                          "partOfSpeech": "verb",
-                          "synonyms": [
-                              "wreathe"
-                          ],
-                          "typeOf": [
-                              "twine",
-                              "intertwine",
-                              "lace",
-                              "entwine",
-                              "enlace",
-                              "interlace"
-                          ]
-                      },
-                      {
-                          "definition": "empty rhetoric or insincere or exaggerated talk",
-                          "partOfSpeech": "noun",
-                          "synonyms": [
-                              "idle words",
-                              "jazz",
-                              "malarkey",
-                              "malarky",
-                              "nothingness"
-                          ],
-                          "typeOf": [
-                              "talking",
-                              "talk"
-                          ],
-                          "derivation": [
-                              "windy"
-                          ],
-                          "examples": [
-                              "that's a lot of wind"
-                          ]
-                      },
-                      {
-                          "definition": "arrange or or coil around",
-                          "partOfSpeech": "verb",
-                          "synonyms": [
-                              "roll",
-                              "twine",
-                              "wrap"
-                          ],
-                          "typeOf": [
-                              "displace",
-                              "move"
-                          ],
-                          "hasTypes": [
-                              "loop",
-                              "ball",
-                              "spool",
-                              "clew",
-                              "clue",
-                              "coil",
-                              "curl",
-                              "reel"
-                          ],
-                          "antonyms": [
-                              "unwind"
-                          ],
-                          "derivation": [
-                              "winder"
-                          ]
-                      },
-                      {
-                          "definition": "to move or cause to move in a sinuous, spiral, or circular course",
-                          "partOfSpeech": "verb",
-                          "synonyms": [
-                              "meander",
-                              "thread",
-                              "wander",
-                              "weave"
-                          ],
-                          "typeOf": [
-                              "go",
-                              "locomote",
-                              "move",
-                              "travel"
-                          ],
-                          "hasTypes": [
-                              "snake"
-                          ],
-                          "verbGroup": [
-                              "wander"
-                          ],
-                          "examples": [
-                              "the river winds through the hills"
-                          ]
-                      },
-                      {
-                          "definition": "extend in curves and turns",
-                          "partOfSpeech": "verb",
-                          "synonyms": [
-                              "curve",
-                              "twist"
-                          ],
-                          "typeOf": [
-                              "be"
-                          ],
-                          "hasTypes": [
-                              "circumvolute",
-                              "spiral",
-                              "snake"
-                          ],
-                          "examples": [
-                              "The road winds around the lake"
-                          ]
-                      },
-                      {
-                          "definition": "the act of winding or twisting",
-                          "partOfSpeech": "noun",
-                          "synonyms": [
-                              "twist",
-                              "winding"
-                          ],
-                          "typeOf": [
-                              "rotation",
-                              "rotary motion"
-                          ],
-                          "examples": [
-                              "he put the key in the old clock and gave it a good wind"
-                          ]
-                      },
-                      {
-                          "definition": "a musical instrument in which the sound is produced by an enclosed column of air that is moved by bellows or the human breath",
-                          "partOfSpeech": "noun",
-                          "synonyms": [
-                              "wind instrument"
-                          ],
-                          "typeOf": [
-                              "instrument",
-                              "musical instrument"
-                          ],
-                          "hasTypes": [
-                              "organ pipe",
-                              "whistle",
-                              "post horn",
-                              "brass",
-                              "pipe",
-                              "sweet potato",
-                              "pipe organ",
-                              "kazoo",
-                              "pipework",
-                              "free-reed instrument",
-                              "ocarina",
-                              "organ",
-                              "woodwind instrument",
-                              "brass instrument",
-                              "woodwind",
-                              "wood"
-                          ],
-                          "hasParts": [
-                              "mouthpiece",
-                              "bell",
-                              "embouchure"
-                          ]
-                      },
-                      {
-                          "definition": "air moving (sometimes with considerable force) from an area of high pressure to an area of low pressure",
-                          "partOfSpeech": "noun",
-                          "synonyms": [
-                              "air current",
-                              "current of air"
-                          ],
-                          "typeOf": [
-                              "weather",
-                              "weather condition",
-                              "atmospheric condition",
-                              "conditions"
-                          ],
-                          "hasTypes": [
-                              "blast",
-                              "blow",
-                              "boreas",
-                              "zephyr",
-                              "breeze",
-                              "calm",
-                              "calm air",
-                              "catabatic wind",
-                              "chinook",
-                              "chinook wind",
-                              "simoon",
-                              "sou'easter",
-                              "sou'wester",
-                              "air",
-                              "khamsin",
-                              "languor",
-                              "monsoon",
-                              "north wind",
-                              "norther",
-                              "northerly",
-                              "northwest wind",
-                              "northwester",
-                              "squall",
-                              "prevailing wind",
-                              "southwester",
-                              "southerly",
-                              "souther",
-                              "southeaster",
-                              "south wind",
-                              "samiel",
-                              "santa ana",
-                              "simoom",
-                              "snow eater",
-                              "crosswind",
-                              "doldrums",
-                              "draft",
-                              "draught",
-                              "east wind",
-                              "easter",
-                              "easterly",
-                              "airstream",
-                              "wester",
-                              "west wind",
-                              "foehn",
-                              "fohn",
-                              "gale",
-                              "gentle wind",
-                              "gust",
-                              "harmattan",
-                              "headwind",
-                              "high wind",
-                              "thermal",
-                              "tailwind",
-                              "katabatic wind"
-                          ],
-                          "hasSubstances": [
-                              "air"
-                          ],
-                          "derivation": [
-                              "windy"
-                          ],
-                          "examples": [
-                              "trees bent under the fierce winds",
-                              "when there is no wind, row"
-                          ]
-                      },
-                      {
-                          "definition": "coil the spring of (some mechanical device) by turning a stem",
-                          "partOfSpeech": "verb",
-                          "synonyms": [
-                              "wind up"
-                          ],
-                          "entails": [
-                              "turn"
-                          ],
-                          "typeOf": [
-                              "fasten",
-                              "tighten"
-                          ],
-                          "hasTypes": [
-                              "rewind"
-                          ],
-                          "derivation": [
-                              "winder"
-                          ],
-                          "examples": [
-                              "wind your watch"
-                          ]
-                      },
-                      {
-                          "definition": "an indication of potential opportunity",
-                          "partOfSpeech": "noun",
-                          "synonyms": [
-                              "confidential information",
-                              "hint",
-                              "lead",
-                              "steer",
-                              "tip"
-                          ],
-                          "typeOf": [
-                              "direction",
-                              "counsel",
-                              "counseling",
-                              "guidance",
-                              "counselling"
-                          ]
-                      },
-                      {
-                          "definition": "a tendency or force that influences events",
-                          "partOfSpeech": "noun",
-                          "typeOf": [
-                              "influence"
-                          ],
-                          "examples": [
-                              "the winds of change"
-                          ]
-                      },
-                      {
-                          "definition": "breath",
-                          "partOfSpeech": "noun",
-                          "typeOf": [
-                              "expiration",
-                              "breathing out",
-                              "exhalation"
-                          ],
-                          "examples": [
-                              "the collision knocked the wind out of him"
-                          ]
-                      }
-                  ],
-                  "syllables": {
-                      "count": 1,
-                      "list": [
-                          "wind"
-                      ]
-                  },
-                  "pronunciation": {
-                      "all": "wɪnd",
-                      "noun": "wɪnd",
-                      "verb": "waɪnd"
-                  },
-                  "frequency": 4.81
-              }
               }
             }
           }
         },
-        "deprecated": false,
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        },
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "GET",
-              "uri": "/words/Testing"
-            },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "KEYS",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "statusCode": "200",
-              "headers": {
-                "Content-Type": "application/json"
-              },
-              "body": "{\n    \"word\": \"wind\",\n    \"results\": [\n        {\n            \"definition\": \"raise or haul up with or as if with mechanical help\",\n            \"partOfSpeech\": \"verb\",\n            \"synonyms\": [\n                \"hoist\",\n                \"lift\"\n            ],\n            \"typeOf\": [\n                \"raise\",\n                \"lift\",\n                \"get up\",\n                \"elevate\",\n                \"bring up\"\n            ],\n            \"hasTypes\": [\n                \"trice up\",\n                \"trice\"\n            ]\n        },\n        {\n            \"definition\": \"catch the scent of; get wind of\",\n            \"partOfSpeech\": \"verb\",\n            \"synonyms\": [\n                \"nose\",\n                \"scent\"\n            ],\n            \"typeOf\": [\n                \"smell\"\n            ]\n        },\n        {\n            \"definition\": \"a reflex that expels intestinal gas through the anus\",\n            \"partOfSpeech\": \"noun\",\n            \"synonyms\": [\n                \"breaking wind\",\n                \"fart\",\n                \"farting\",\n                \"flatus\"\n            ],\n            \"typeOf\": [\n                \"reflex\",\n                \"instinctive reflex\",\n                \"innate reflex\",\n                \"reflex action\",\n                \"physiological reaction\",\n                \"unconditioned reflex\",\n                \"inborn reflex\",\n                \"reflex response\"\n            ]\n        },\n        {\n            \"definition\": \"form into a wreath\",\n            \"partOfSpeech\": \"verb\",\n            \"synonyms\": [\n                \"wreathe\"\n            ],\n            \"typeOf\": [\n                \"twine\",\n                \"intertwine\",\n                \"lace\",\n                \"entwine\",\n                \"enlace\",\n                \"interlace\"\n            ]\n        },\n        {\n            \"definition\": \"empty rhetoric or insincere or exaggerated talk\",\n            \"partOfSpeech\": \"noun\",\n            \"synonyms\": [\n                \"idle words\",\n                \"jazz\",\n                \"malarkey\",\n                \"malarky\",\n                \"nothingness\"\n            ],\n            \"typeOf\": [\n                \"talking\",\n                \"talk\"\n            ],\n            \"derivation\": [\n                \"windy\"\n            ],\n            \"examples\": [\n                \"that's a lot of wind\"\n            ]\n        },\n        {\n            \"definition\": \"arrange or or coil around\",\n            \"partOfSpeech\": \"verb\",\n            \"synonyms\": [\n                \"roll\",\n                \"twine\",\n                \"wrap\"\n            ],\n            \"typeOf\": [\n                \"displace\",\n                \"move\"\n            ],\n            \"hasTypes\": [\n                \"loop\",\n                \"ball\",\n                \"spool\",\n                \"clew\",\n                \"clue\",\n                \"coil\",\n                \"curl\",\n                \"reel\"\n            ],\n            \"antonyms\": [\n                \"unwind\"\n            ],\n            \"derivation\": [\n                \"winder\"\n            ]\n        },\n        {\n            \"definition\": \"to move or cause to move in a sinuous, spiral, or circular course\",\n            \"partOfSpeech\": \"verb\",\n            \"synonyms\": [\n                \"meander\",\n                \"thread\",\n                \"wander\",\n                \"weave\"\n            ],\n            \"typeOf\": [\n                \"go\",\n                \"locomote\",\n                \"move\",\n                \"travel\"\n            ],\n            \"hasTypes\": [\n                \"snake\"\n            ],\n            \"verbGroup\": [\n                \"wander\"\n            ],\n            \"examples\": [\n                \"the river winds through the hills\"\n            ]\n        },\n        {\n            \"definition\": \"extend in curves and turns\",\n            \"partOfSpeech\": \"verb\",\n            \"synonyms\": [\n                \"curve\",\n                \"twist\"\n            ],\n            \"typeOf\": [\n                \"be\"\n            ],\n            \"hasTypes\": [\n                \"circumvolute\",\n                \"spiral\",\n                \"snake\"\n            ],\n            \"examples\": [\n                \"The road winds around the lake\"\n            ]\n        },\n        {\n            \"definition\": \"the act of winding or twisting\",\n            \"partOfSpeech\": \"noun\",\n            \"synonyms\": [\n                \"twist\",\n                \"winding\"\n            ],\n            \"typeOf\": [\n                \"rotation\",\n                \"rotary motion\"\n            ],\n            \"examples\": [\n                \"he put the key in the old clock and gave it a good wind\"\n            ]\n        },\n        {\n            \"definition\": \"a musical instrument in which the sound is produced by an enclosed column of air that is moved by bellows or the human breath\",\n            \"partOfSpeech\": \"noun\",\n            \"synonyms\": [\n                \"wind instrument\"\n            ],\n            \"typeOf\": [\n                \"instrument\",\n                \"musical instrument\"\n            ],\n            \"hasTypes\": [\n                \"organ pipe\",\n                \"whistle\",\n                \"post horn\",\n                \"brass\",\n                \"pipe\",\n                \"sweet potato\",\n                \"pipe organ\",\n                \"kazoo\",\n                \"pipework\",\n                \"free-reed instrument\",\n                \"ocarina\",\n                \"organ\",\n                \"woodwind instrument\",\n                \"brass instrument\",\n                \"woodwind\",\n                \"wood\"\n            ],\n            \"hasParts\": [\n                \"mouthpiece\",\n                \"bell\",\n                \"embouchure\"\n            ]\n        },\n        {\n            \"definition\": \"air moving (sometimes with considerable force) from an area of high pressure to an area of low pressure\",\n            \"partOfSpeech\": \"noun\",\n            \"synonyms\": [\n                \"air current\",\n                \"current of air\"\n            ],\n            \"typeOf\": [\n                \"weather\",\n                \"weather condition\",\n                \"atmospheric condition\",\n                \"conditions\"\n            ],\n            \"hasTypes\": [\n                \"blast\",\n                \"blow\",\n                \"boreas\",\n                \"zephyr\",\n                \"breeze\",\n                \"calm\",\n                \"calm air\",\n                \"catabatic wind\",\n                \"chinook\",\n                \"chinook wind\",\n                \"simoon\",\n                \"sou'easter\",\n                \"sou'wester\",\n                \"air\",\n                \"khamsin\",\n                \"languor\",\n                \"monsoon\",\n                \"north wind\",\n                \"norther\",\n                \"northerly\",\n                \"northwest wind\",\n                \"northwester\",\n                \"squall\",\n                \"prevailing wind\",\n                \"southwester\",\n                \"southerly\",\n                \"souther\",\n                \"southeaster\",\n                \"south wind\",\n                \"samiel\",\n                \"santa ana\",\n                \"simoom\",\n                \"snow eater\",\n                \"crosswind\",\n                \"doldrums\",\n                \"draft\",\n                \"draught\",\n                \"east wind\",\n                \"easter\",\n                \"easterly\",\n                \"airstream\",\n                \"wester\",\n                \"west wind\",\n                \"foehn\",\n                \"fohn\",\n                \"gale\",\n                \"gentle wind\",\n                \"gust\",\n                \"harmattan\",\n                \"headwind\",\n                \"high wind\",\n                \"thermal\",\n                \"tailwind\",\n                \"katabatic wind\"\n            ],\n            \"hasSubstances\": [\n                \"air\"\n            ],\n            \"derivation\": [\n                \"windy\"\n            ],\n            \"examples\": [\n                \"trees bent under the fierce winds\",\n                \"when there is no wind, row\"\n            ]\n        },\n        {\n            \"definition\": \"coil the spring of (some mechanical device) by turning a stem\",\n            \"partOfSpeech\": \"verb\",\n            \"synonyms\": [\n                \"wind up\"\n            ],\n            \"entails\": [\n                \"turn\"\n            ],\n            \"typeOf\": [\n                \"fasten\",\n                \"tighten\"\n            ],\n            \"hasTypes\": [\n                \"rewind\"\n            ],\n            \"derivation\": [\n                \"winder\"\n            ],\n            \"examples\": [\n                \"wind your watch\"\n            ]\n        },\n        {\n            \"definition\": \"an indication of potential opportunity\",\n            \"partOfSpeech\": \"noun\",\n            \"synonyms\": [\n                \"confidential information\",\n                \"hint\",\n                \"lead\",\n                \"steer\",\n                \"tip\"\n            ],\n            \"typeOf\": [\n                \"direction\",\n                \"counsel\",\n                \"counseling\",\n                \"guidance\",\n                \"counselling\"\n            ]\n        },\n        {\n            \"definition\": \"a tendency or force that influences events\",\n            \"partOfSpeech\": \"noun\",\n            \"typeOf\": [\n                \"influence\"\n            ],\n            \"examples\": [\n                \"the winds of change\"\n            ]\n        },\n        {\n            \"definition\": \"breath\",\n            \"partOfSpeech\": \"noun\",\n            \"typeOf\": [\n                \"expiration\",\n                \"breathing out\",\n                \"exhalation\"\n            ],\n            \"examples\": [\n                \"the collision knocked the wind out of him\"\n            ]\n        }\n    ],\n    \"syllables\": {\n        \"count\": 1,\n        \"list\": [\n            \"wind\"\n        ]\n    },\n    \"pronunciation\": {\n        \"all\": \"wɪnd\",\n        \"noun\": \"wɪnd\",\n        \"verb\": \"waɪnd\"\n    },\n    \"frequency\": 4.81\n}"
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": false,
-            "x-testName": "Test Word",
-            "x-testDescription": "Retrieve information about a word. Results can include definitions, part of speech, synonyms, related words, syllables, and pronunciation. This method is useful to see which relationships are attached to which definition and part of speech of a word."
-          }
-        ]
+        "deprecated": false
       }
     },
     "/words/{word}/examples": {
@@ -839,37 +232,7 @@
             }
           }
         },
-        "deprecated": false,
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        },
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "GET",
-              "uri": "/words/wind/examples"
-            },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "KEYS",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "statusCode": "200",
-              "headers": {
-                "Content-Type": "application/json"
-              },
-              "body": "{\"word\":\"testing\",\"examples\":[\"there are laboratories for commercial testing\",\"it involved testing thousands of children for smallpox\",\"they agreed to end the testing of atomic weapons\"]}"
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": false,
-            "x-testName": "Test Examples",
-            "x-testDescription": "Get examples of how the word is used."
-          }
-        ]
+        "deprecated": false
       }
     },
     "/words/{word}/frequency": {
@@ -914,37 +277,7 @@
             }
           }
         },
-        "deprecated": false,
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        },
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "GET",
-              "uri": "/words/lovely/frequency"
-            },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "KEYS",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "statusCode": "200",
-              "headers": {
-                "Content-Type": "application/json"
-              },
-              "body": "{\"word\":\"wind\",\"frequency\":{\"zipf\":4.81,\"perMillion\":64.22,\"diversity\":0.2}}"
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": false,
-            "x-testName": "Test Frequency",
-            "x-testDescription": "Expands upon the frequency score returned by the main /words/{word} endpoint. Returns zipf, a score indicating how common the word is in the English language, with a range of 1 to 7; per Million, the number of times the word is likely to appear in a corpus of one million English words; and diversity, a 0-1 scale the shows the likelihood of the word appearing in an English document that is part of a corpus."
-          }
-        ]
+        "deprecated": false
       }
     }
   },
@@ -1334,7 +667,13 @@
             ]
           },
           "pronunciation": {
-            "$ref": "#/components/schemas/PronunciationDetails"
+            "type": "object",
+            "description": "This model contains pronunciation details of a specific word.",
+            "example": {
+              "all": "wɪnd",
+              "noun": "wɪnd",
+              "verb": "waɪnd"
+            }
           },
           "frequency": {
             "type": "number",
