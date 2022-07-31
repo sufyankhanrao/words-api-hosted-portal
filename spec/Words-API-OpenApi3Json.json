@@ -8,7 +8,7 @@
       "url": "apimatic.io",
       "email": "muhammad.sufyan@apimatic.io"
     },
-    "version": "1.0"
+    "version": "1.0.2"
   },
   "servers": [
     {
@@ -285,15 +285,12 @@
     "schemas": {
       "DefinitionsResponse": {
         "title": "DefinitionsResponse",
-        "required": [
-          "word",
-          "definition"
-        ],
         "type": "object",
         "properties": {
           "word": {
             "type": "string",
             "description": "The word that is searched.",
+            "nullable": true,
             "example": "lovely"
           },
           "definition": {
@@ -302,6 +299,7 @@
               "type": "string"
             },
             "description": "The definitions of the searched word.",
+            "nullable": true,
             "example": [
               "lovable especially in a childlike or naive way",
               "a very pretty girl who works as a photographer's model",
@@ -321,15 +319,12 @@
       },
       "ExamplesResponse": {
         "title": "ExamplesResponse",
-        "required": [
-          "word",
-          "examples"
-        ],
         "type": "object",
         "properties": {
           "word": {
             "type": "string",
             "description": "The word that is searched.",
+            "nullable": true,
             "example": "testing"
           },
           "examples": {
@@ -338,6 +333,7 @@
               "type": "string"
             },
             "description": "The usage examples of the searched word.",
+            "nullable": true,
             "example": [
               "there are laboratories for commercial testing",
               "it involved testing thousands of children for smallpox",
@@ -357,24 +353,24 @@
       },
       "PronunciationDetails": {
         "title": "PronunciationDetails",
-        "required": [
-          "all"
-        ],
         "type": "object",
         "properties": {
           "all": {
             "type": "string",
             "description": "The pronunciation of the word.",
+            "nullable": true,
             "example": "wɪnd"
           },
           "noun": {
             "type": "string",
             "description": "The noun pronunciation of the word.",
+            "nullable": true,
             "example": "wɪnd"
           },
           "verb": {
             "type": "string",
             "description": "The verb pronunciation of the word.",
+            "nullable": true,
             "example": "waɪnd"
           }
         },
@@ -387,15 +383,12 @@
       },
       "SynonymsResponse": {
         "title": "SynonymsResponse",
-        "required": [
-          "word",
-          "synonyms"
-        ],
         "type": "object",
         "properties": {
           "word": {
             "type": "string",
             "description": "The word that is searched.",
+            "nullable": true,
             "example": "lovely"
           },
           "synonyms": {
@@ -404,6 +397,7 @@
               "type": "string"
             },
             "description": "The synonyms of the searched word.",
+            "nullable": true,
             "example": [
               "adorable",
               "endearing",
@@ -425,15 +419,12 @@
       },
       "FrequencyResponse": {
         "title": "FrequencyResponse",
-        "required": [
-          "word",
-          "frequency"
-        ],
         "type": "object",
         "properties": {
           "word": {
             "type": "string",
             "description": "The word that is searched.",
+            "nullable": true,
             "example": "testing"
           },
           "frequency": {
@@ -457,11 +448,13 @@
           "definition": {
             "type": "string",
             "description": "Explains the definition of the word.",
+            "nullable": true,
             "example": "an examination of the characteristics of something."
           },
           "partOfSpeech": {
             "type": "string",
             "description": "Explains what part of speech the word is.",
+            "nullable": true,
             "example": "noun"
           },
           "synonyms": {
@@ -470,6 +463,7 @@
               "type": "string"
             },
             "description": "The list of synonyms.",
+            "nullable": true,
             "example": [
               "examination"
             ]
@@ -480,6 +474,7 @@
               "type": "string"
             },
             "description": "List of words that are more general than the searched word.",
+            "nullable": true,
             "example": [
               "examination",
               "scrutiny"
@@ -491,6 +486,7 @@
               "type": "string"
             },
             "description": "More specific examples of types of searched word.",
+            "nullable": true,
             "example": [
               "screening"
             ]
@@ -501,6 +497,7 @@
               "type": "string"
             },
             "description": "The derivation if any.",
+            "nullable": true,
             "example": [
               "test"
             ]
@@ -511,6 +508,7 @@
               "type": "string"
             },
             "description": "The usage examples of word if any.",
+            "nullable": true,
             "example": [
               "there are laboratories for commercial testing",
               "it involved testing thousands of children for smallpox"
@@ -522,6 +520,7 @@
               "type": "string"
             },
             "description": "List of antonyms for the searched word.",
+            "nullable": true,
             "example": [
               "unwind"
             ]
@@ -532,6 +531,7 @@
               "type": "string"
             },
             "description": "The verb group of the searched word.",
+            "nullable": true,
             "example": [
               "wander"
             ]
@@ -542,6 +542,7 @@
               "type": "string"
             },
             "description": "Words that are parts of the searched word.",
+            "nullable": true,
             "example": [
               "mouthpiece",
               "bell",
@@ -554,6 +555,7 @@
               "type": "string"
             },
             "description": "Words that are substances of the searched word.",
+            "nullable": true,
             "example": [
               "air"
             ]
@@ -564,6 +566,7 @@
               "type": "string"
             },
             "description": "Words that are implied by the searched word. Usually used for verbs.",
+            "nullable": true,
             "example": [
               "turn"
             ]
@@ -596,15 +599,12 @@
       },
       "WordResponse": {
         "title": "WordResponse",
-        "required": [
-          "word",
-          "results"
-        ],
         "type": "object",
         "properties": {
           "word": {
             "type": "string",
             "description": "The word that is searched.",
+            "nullable": true,
             "example": "testing"
           },
           "results": {
@@ -613,6 +613,7 @@
               "$ref": "#/components/schemas/WordDetails"
             },
             "description": "This field contains detailed information of the word.",
+            "nullable": true,
             "example": [
               {
                 "definition": "the act of giving students or candidates a test (as by questions) to determine what they know or have learned",
@@ -669,6 +670,7 @@
           "pronunciation": {
             "type": "object",
             "description": "This model contains pronunciation details of a specific word.",
+            "nullable": true,
             "example": {
               "all": "wɪnd",
               "noun": "wɪnd",
@@ -678,6 +680,7 @@
           "frequency": {
             "type": "number",
             "description": "The frequency of the word usage.",
+            "nullable": true,
             "example": 4.14
           },
           "syllables": {
@@ -1056,15 +1059,12 @@
       },
       "PronunciationResponse": {
         "title": "PronunciationResponse",
-        "required": [
-          "word",
-          "pronunciation"
-        ],
         "type": "object",
         "properties": {
           "word": {
             "type": "string",
             "description": "The word that is searched.",
+            "nullable": true,
             "example": "testing"
           },
           "pronunciation": {
@@ -1083,26 +1083,24 @@
       },
       "FrequencyDetails": {
         "title": "FrequencyDetails",
-        "required": [
-          "zipf",
-          "perMillion",
-          "diversity"
-        ],
         "type": "object",
         "properties": {
           "zipf": {
             "type": "number",
             "description": "Explains the zipf score.",
+            "nullable": true,
             "example": 4.82
           },
           "perMillion": {
             "type": "number",
             "description": "Explains the perMillion score.",
+            "nullable": true,
             "example": 65.76
           },
           "diversity": {
             "type": "number",
             "description": "Explains the diversity score.",
+            "nullable": true,
             "example": 0.17
           }
         },
@@ -1121,6 +1119,7 @@
             "type": "integer",
             "description": "The count of syllables.",
             "format": "int32",
+            "nullable": true,
             "example": 5
           },
           "list": {
@@ -1129,6 +1128,7 @@
               "type": "string"
             },
             "description": "The list of syllables.",
+            "nullable": true,
             "example": [
               "wind"
             ]
